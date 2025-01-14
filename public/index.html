@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+
+</head>
+<body>
+    <h1>API Documentation</h1>
+
+    <h2>Users</h2>
+    <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="url">/api/users</span>
+        <p>Get all users. Supports pagination and search.</p>
+        <p>Query parameters:</p>
+        <ul>
+            <li><code>page</code>: Page number (default: 1)</li>
+            <li><code>limit</code>: Items per page (default: 10)</li>
+            <li><code>search</code>: Search by username, email, or firstName</li>
+            <li><code>sort</code>: Field to sort by</li>
+            <li><code>order</code>: Sort order (asc/desc)</li>
+        </ul>
+    </div>
+
+    <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="url">/api/users/:userId</span>
+        <p>Get a specific user by ID</p>
+    </div>
+
+    <div class="endpoint">
+        <span class="method post">POST</span>
+        <span class="url">/api/users</span>
+        <p>Create a new user</p>
+        <p>Required fields:</p>
+        <ul>
+            <li><code>username</code>: Unique username</li>
+            <li><code>email</code>: Valid email address</li>
+            <li><code>password</code>: Minimum 8 characters, must include numbers and special characters</li>
+            <li><code>birthday</code>: Format DD-MM-YYYY, must be 16+</li>
+        </ul>
+    </div>
+
+    <div class="endpoint">
+        <span class="method put">PUT</span>
+        <span class="url">/api/users/:userId</span>
+        <p>Update a user</p>
+    </div>
+
+    <div class="endpoint">
+        <span class="method delete">DELETE</span>
+        <span class="url">/api/users/:userId</span>
+        <p>Delete a user</p>
+    </div>
+
+    <h2>Products</h2>
+    <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="url">/api/products</span>
+        <p>Get all products. Supports pagination and search.</p>
+        <p>Query parameters:</p>
+        <ul>
+            <li><code>page</code>: Page number (default: 1)</li>
+            <li><code>limit</code>: Items per page (default: 10)</li>
+            <li><code>search</code>: Search by name</li>
+            <li><code>tag</code>: Filter by tag</li>
+            <li><code>sort</code>: Field to sort by</li>
+            <li><code>order</code>: Sort order (asc/desc)</li>
+        </ul>
+    </div>
+
+    <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="url">/api/products/:productId</span>
+        <p>Get a specific product by ID</p>
+    </div>
+
+    <div class="endpoint">
+        <span class="method post">POST</span>
+        <span class="url">/api/products</span>
+        <p>Create a new product</p>
+        <p>Required fields:</p>
+        <ul>
+            <li><code>name</code>: Product name</li>
+            <li><code>quantity</code>: Number</li>
+            <li><code>price</code>: Number</li>
+            <li><code>addedBy</code>: User ID</li>
+        </ul>
+    </div>
+
+    <div class="endpoint">
+        <span class="method put">PUT</span>
+        <span class="url">/api/products/:productId</span>
+        <p>Update a product</p>
+    </div>
+
+    <div class="endpoint">
+        <span class="method delete">DELETE</span>
+        <span class="url">/api/products/:productId</span>
+        <p>Delete a product</p>
+    </div>
+
+    <h2>Posts</h2>
+    <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="url">/api/posts</span>
+        <p>Get all posts. Supports pagination and search.</p>
+        <p>Query parameters:</p>
+        <ul>
+            <li><code>page</code>: Page number (default: 1)</li>
+            <li><code>limit</code>: Items per page (default: 10)</li>
+            <li><code>search</code>: Search by title or content</li>
+            <li><code>tag</code>: Filter by tag</li>
+            <li><code>sort</code>: Field to sort by</li>
+            <li><code>order</code>: Sort order (asc/desc)</li>
+        </ul>
+    </div>
+
+    <div class="endpoint">
+        <span class="method get">GET</span>
+        <span class="url">/api/posts/:postId</span>
+        <p>Get a specific post by ID</p>
+    </div>
+
+    <div class="endpoint">
+        <span class="method post">POST</span>
+        <span class="url">/api/posts</span>
+        <p>Create a new post</p>
+        <p>Required fields:</p>
+        <ul>
+            <li><code>title</code>: Minimum 5 characters</li>
+            <li><code>content</code>: Minimum 20 characters</li>
+            <li><code>author</code>: User ID</li>
+        </ul>
+    </div>
+
+    <div class="endpoint">
+        <span class="method put">PUT</span>
+        <span class="url">/api/posts/:postId</span>
+        <p>Update a post</p>
+    </div>
+
+    <div class="endpoint">
+        <span class="method delete">DELETE</span>
+        <span class="url">/api/posts/:postId</span>
+        <p>Delete a post</p>
+    </div>
+</body>
+</html>
